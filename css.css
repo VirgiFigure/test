@@ -1,0 +1,88 @@
+/* Tampilan Awal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(30, 30, 230, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+/* Kontainer Permainan */
+#game-container {
+    display: grid; /* Menggunakan grid untuk tata letak kartu */
+    grid-template-columns: repeat(4, 100px); /* 4 kolom dengan lebar 100px */
+    grid-gap: 15px; /* Jarak antar kartu */
+    margin-top: 20px; /* Jarak atas untuk kontainer permainan */
+}
+.announcement {
+    position: fixed; /* Posisi tetap di layar */
+    top: 20px; /* Jarak dari atas */
+    left: 50%; /* Pusatkan secara horizontal */
+    transform: translateX(-50%); /* Pusatkan secara horizontal */
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan */
+    color: white; /* Warna teks */
+    padding: 20px; /* Ruang dalam */
+    border-radius: 10px; /* Sudut melengkung */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek kedalaman */
+}
+
+/* Gaya Kartu */
+.card {
+    width: 100px; /* Lebar kartu */
+    height: 100px; /* Tinggi kartu */
+    background-color: #ff4757; /* Warna latar belakang kartu */
+    display: flex;
+    align-items: center; /* Pusatkan konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    font-size: 24px; /* Ukuran font untuk isi kartu */
+    color: white; /* Warna teks kartu */
+    cursor: pointer; /* Menunjukkan bahwa kartu dapat diklik */
+    border-radius: 10px; /* Sudut melengkung pada kartu */
+    transition: background-color 0.3s, transform 0.2s; /* Transisi halus untuk perubahan warna */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover pada kartu */
+}
+
+.card.flipped {
+    background-color: #ff4757; /* Warna latar belakang saat kartu dibalik */
+}

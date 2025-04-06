@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <h1>メモリー ゲーム</h1>
+    
+    <!-- Layer Start -->
+    <div id="start-screen" class="screen">
+        <h1>漢字を練習しましょう！</h1>
+        <button id="start-button">スタート</button>
+    </div>
+
+    <!-- Layer Level -->
+    <div id="level-screen" class="screen" style="display: none;">
+        <h2>Pilih Bab</h2>
+        <div id="levelContainer">
+            <button class="levelButton" data-level="1">Bab 1</button>
+            <button class="levelButton" data-level="2">Bab 2</button>
+            <button class="levelButton" data-level="3">Bab 3</button>
+            <button class="levelButton" data-level="4">Bab 4</button>
+            <button class="levelButton" data-level="5">Bab 5</button>
+            <button class="levelButton" data-level="6">Bab 6</button>
+            <button class="levelButton" data-level="7">Bab 7</button>
+            <button class="levelButton" data-level="8">Bab 8</button>
+            <button class="levelButton" data-level="9">Bab 9</button>
+            <button class="levelButton" data-level="10">Bab 10</button>
+        </div>
+        <div id="stageContainer"></div>
+    </div>
+
+    <!-- game -->
+    <div id="game-container" style="display: none;"></div>
+    <div id="game-container"></div>
+    <button id="restart">Restart Game</button>
+    <div class="score">Score: 0</div>
+    <div class="results"></div>
+    <script src="script.js"></script>
+    <!-- Kolom Pengumuman -->
+    <div id="announcement" style="display: none;" class="announcement">
+        <p>Musim Gugur = あき　秋<br>
+            Musim Semi = はる　春<br>
+            Musim Panas = なつ　夏<br>
+            Musim Dingin = ふつ　冬
+        </p>
+        <button id="close-announcement">Sudah Paham!!!</button>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
